@@ -216,3 +216,10 @@ target_link_libraries(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+install(FILES plugins.xml DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(
+  TARGETS layered_hardware_dynamixel_plugins
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION})
